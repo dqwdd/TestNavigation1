@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/navigation_main"
+    app:startDestination="@id/testFragment">
+
+    <keep_state_fragment
+        android:id="@+id/testFragment"
+        android:name="net.megastudy.testnavigation1.TestFragment"
+        android:label="fragment_test"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_test">
+    </keep_state_fragment>
+
+    <keep_state_fragment
+        android:id="@+id/testAFragment"
+        android:name="net.megastudy.testnavigation1.TestAFragment"
+        android:label="fragment_test_a"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_test_a" />
+
+    <keep_state_fragment
+        android:id="@+id/testBFragment"
+        android:name="net.megastudy.testnavigation1.TestBFragment"
+        android:label="fragment_test_b"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_test_b" />
+
+    <keep_state_fragment
+        android:id="@+id/testCFragment"
+        android:name="net.megastudy.testnavigation1.TestCFragment"
+        android:label="fragment_test_c"
+        app:popUpToSaveState="true"
+        tools:layout="@layout/fragment_test_c" />
+</navigation>
