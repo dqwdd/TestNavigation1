@@ -1,5 +1,8 @@
 [versions]
 
+# Room
+room = "2.5.1"
+
 # Navigation
 navigation = "2.5.3"
 
@@ -59,6 +62,11 @@ kotlin-kapt = "1.9.0"
 
 
 [libraries] # libraries
+
+# Room
+room-runtime = { module = "androidx.room:room-runtime", version.ref = "room" }
+room-compiler = { module = "androidx.room:room-compiler", version.ref = "room" }
+room-ktx = { module = "androidx.room:room-ktx", version.ref = "room" }
 
 # Navigation
 navigation-fragment = { group = "androidx.navigation", name = "navigation-fragment-ktx", version.ref = "navigation" }

@@ -4,6 +4,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.kapt)
     alias(libs.plugins.nav.safe.args)
+    alias(libs.plugins.kotlin.parcelize)
 }
 
 android {
@@ -43,6 +44,11 @@ android {
 }
 
 dependencies {
+
+    // Room
+    implementation(libs.room.runtime)
+    implementation(libs.room.ktx)
+    kapt(libs.room.compiler)
 
     // Navigation
     implementation(libs.navigation.fragment)
