@@ -9,7 +9,7 @@ import net.megastudy.testnavigation1.db.entity.NaviStack
 @Database(entities = [NaviStack::class], version = 2)
 abstract class LocalDatabase : RoomDatabase() {
 
-    abstract fun NaviStackDao() : NaviStackDao
+    abstract fun naviStackDao() : NaviStackDao
 
     companion object {
         private const val dbName = "testDB"
@@ -26,11 +26,9 @@ abstract class LocalDatabase : RoomDatabase() {
 //                        }
 //                    )
                     .fallbackToDestructiveMigration()
-                    .build().also {
-                        instance = it
-                    }
+                    .build()
 
-                instance!!
+                mInstance
             }
         }
     }
