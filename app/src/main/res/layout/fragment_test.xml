@@ -10,12 +10,12 @@
 
         <LinearLayout
             android:id="@+id/layoutSidebar"
-            android:layout_width="match_parent"
+            android:layout_width="100dp"
             android:layout_height="wrap_content"
             android:background="#60000000"
             android:orientation="horizontal"
             app:behavior_peekWidth="156dp"
-            app:layout_behavior=".SideSheetBehavior">
+            app:layout_behavior="com.google.android.material.sidesheet.SideSheetBehavior">
 
             <ImageButton
                 android:id="@+id/btnCloseSidebar"

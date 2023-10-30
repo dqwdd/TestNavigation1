@@ -3,6 +3,7 @@ package net.megastudy.testnavigation1
 import android.os.Bundle
 import android.view.View
 import androidx.navigation.findNavController
+import com.google.android.material.sidesheet.SideSheetBehavior
 import net.megastudy.testnavigation1.base.BaseBindingFragment
 import net.megastudy.testnavigation1.databinding.FragmentTestBinding
 
@@ -17,14 +18,14 @@ class TestFragment : BaseBindingFragment<FragmentTestBinding>(R.layout.fragment_
     override fun setupEvents() {
         super.setupEvents()
 
+//        val sideSheetBehavior = SideSheetBehavior.from(binding.layoutSidebar)
         val sideSheetBehavior = SideSheetBehavior.from(binding.layoutSidebar)
-//        com.google.android.material.sidesheet.SideSheetBehavior.from(binding.btnSideView).coplanarSiblingView
 //            sideSheetBehavior.state = SideSheetBehavior.s
 
-        sideSheetBehavior.peekWidthMin
         sideSheetBehavior.coplanarSiblingView = binding.layoutConstraint
+//        sideSheetBehavior.setState(SideSheetBehavior.STATE_EXPANDED)
         binding.btnSideView.setOnClickListener {
-            sideSheetBehavior.state = SideSheetBehavior.STATE_HALF_EXPANDED
+            sideSheetBehavior.setState(SideSheetBehavior.STATE_EXPANDED)
         }
 
 

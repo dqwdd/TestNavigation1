@@ -4,6 +4,7 @@ import static androidx.annotation.RestrictTo.Scope.LIBRARY_GROUP;
 
 import android.animation.ValueAnimator;
 import android.animation.ValueAnimator.AnimatorUpdateListener;
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.res.ColorStateList;
 import android.content.res.TypedArray;
@@ -20,6 +21,7 @@ import android.view.ViewGroup;
 import android.view.ViewParent;
 import android.view.accessibility.AccessibilityEvent;
 
+import androidx.annotation.IdRes;
 import androidx.annotation.IntDef;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -246,6 +248,86 @@ public class SideSheetBehavior<V extends View> extends CoordinatorLayout.Behavio
 
   private Map<View, Integer> importantForAccessibilityMap;
 
+  /**
+   * 내가 한 거
+   * 시작
+   * */
+
+//  @Nullable private WeakReference<View> coplanarSiblingViewRef;
+//  @IdRes
+//  private int coplanarSiblingViewId = View.NO_ID;
+//
+//  private void maybeAssignCoplanarSiblingViewBasedId(@NonNull CoordinatorLayout parent) {
+//    if (coplanarSiblingViewRef == null && coplanarSiblingViewId != View.NO_ID) {
+//      View coplanarSiblingView = parent.findViewById(coplanarSiblingViewId);
+//      if (coplanarSiblingView != null) {
+//        this.coplanarSiblingViewRef = new WeakReference<>(coplanarSiblingView);
+//      }
+//    }
+//  }
+//  /**
+//   * Set the sibling view to use for coplanar sheet expansion. If a coplanar sibling has previously
+//   * been set either by this method or via {@link #setCoplanarSiblingViewId(int)}, that reference
+//   * will be cleared in favor of this new coplanar sibling reference.
+//   *
+//   * @param coplanarSiblingView the sibling view to squash during coplanar expansion
+//   */
+//  public void setCoplanarSiblingView(@Nullable View coplanarSiblingView) {
+//    this.coplanarSiblingViewId = View.NO_ID;
+//    if (coplanarSiblingView == null) {
+//      clearCoplanarSiblingView();
+//    } else {
+//      this.coplanarSiblingViewRef = new WeakReference<>(coplanarSiblingView);
+//      // Request layout to make the new view take effect.
+//      if (viewRef != null) {
+//        View view = viewRef.get();
+//        if (ViewCompat.isLaidOut(view)) {
+//          view.requestLayout();
+//        }
+//      }
+//    }
+//  }
+//
+//  /**
+//   * Set the sibling id to use for coplanar sheet expansion. If a coplanar sibling has previously
+//   * been set either by this method or via {@link #setCoplanarSiblingView(View)}, that View
+//   * reference will be cleared in favor of this new coplanar sibling reference.
+//   *
+//   * @param coplanarSiblingViewId the id of the coplanar sibling
+//   */
+//  public void setCoplanarSiblingViewId(@IdRes int coplanarSiblingViewId) {
+//    this.coplanarSiblingViewId = coplanarSiblingViewId;
+//    // Clear any potential coplanar sibling view to make sure that we use this view id rather than
+//    // an existing coplanar sibling view.
+//    clearCoplanarSiblingView();
+//    // Request layout to find the view and trigger a layout pass.
+//    if (viewRef != null) {
+//      View view = viewRef.get();
+//      if (coplanarSiblingViewId != View.NO_ID && ViewCompat.isLaidOut(view)) {
+//        view.requestLayout();
+//      }
+//    }
+//  }
+//  /** Returns the sibling view that is used for coplanar sheet expansion. */
+//  @Nullable
+//  public View getCoplanarSiblingView() {
+//    return coplanarSiblingViewRef != null ? coplanarSiblingViewRef.get() : null;
+//  }
+//
+//  private void clearCoplanarSiblingView() {
+//    if (this.coplanarSiblingViewRef != null) {
+//      this.coplanarSiblingViewRef.clear();
+//    }
+//    this.coplanarSiblingViewRef = null;
+//  }
+
+
+
+  /**
+   * 내가 한 거
+   * 끝
+   * */
+
   public SideSheetBehavior() {
   }
 
@@ -263,6 +345,20 @@ public class SideSheetBehavior<V extends View> extends CoordinatorLayout.Behavio
       createMaterialShapeDrawable(context, attrs, hasBackgroundTint);
     }
     createShapeValueAnimator();
+
+
+
+    //SideSheetBehavior_Layout_coplanarSiblingViewId 이거 검색해보기
+
+//    if (a.hasValue(R.styleable.SideSheetBehavior_Layout_coplanarSiblingViewId)) {
+//      setCoplanarSiblingViewId(
+//              a.getResourceId(R.styleable.SideSheetBehavior_Layout_coplanarSiblingViewId, View.NO_ID));
+//    }
+//    if (a.hasValue(com.google.android.material.R.styleable.SideSheetBehavior_Layout_coplanarSiblingViewId)) {
+//      setCoplanarSiblingViewId(
+//              a.getResourceId(com.google.android.material.R.styleable.SideSheetBehavior_Layout_coplanarSiblingViewId, View.NO_ID));
+//    }
+
 
     TypedValue value = a.peekValue(R.styleable.SideSheetBehavior_Layout_behavior_peekWidth);
     if (value != null && value.data == PEEK_WIDTH_AUTO) {
