@@ -29,6 +29,7 @@ class TestFragment : BaseBindingFragment<FragmentTestBinding>(R.layout.fragment_
         }
 
 
+
         binding.btnMoveA.setOnClickListener {
             val navController = requireActivity().findNavController(R.id.flMain)
             navController.navigate(R.id.testAFragment)
