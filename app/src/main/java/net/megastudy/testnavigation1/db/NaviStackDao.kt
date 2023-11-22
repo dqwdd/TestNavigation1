@@ -16,6 +16,10 @@ interface NaviStackDao {
     @Query("SELECT * FROM fragmentNaviStack WHERE stackNumber = :stackNumber")
     fun getFragmentNaviStack(stackNumber: Long): NaviStack
 
+
+    @Query("SELECT * FROM fragmentNaviStack")
+    fun getAll(): List<NaviStack>
+
 //    @Query("SELECT * FROM fragmentNaviStack WHERE stackNumber = :number")
 //    fun getFragmentNaviStackOrderNumber(number: Int): List<NaviStack>
 
@@ -25,6 +29,6 @@ interface NaviStackDao {
     @Delete
     fun deleteStack(stack: NaviStack)
 
-    @Query("DELETE FROM fragmentNaviStack")
-    fun deleteStack()
+    @Query("DELETE FROM fragmentNaviStack WHERE fragmentStack = :fragmentStack")
+    fun deleteStackFromFragmentStack(fragmentStack: String)
 }

@@ -12,8 +12,20 @@
             android:id="@+id/tvFragmentA"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Test A Fragment"
+            android:text="Test A Fragment DB Add"
             android:textSize="20dp"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <TextView
+            android:id="@+id/tvFragmentDB"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Test A Fragment DB Delete"
+            android:textSize="20dp"
+            android:layout_marginTop="100dp"
             app:layout_constraintBottom_toBottomOf="parent"
             app:layout_constraintEnd_toEndOf="parent"
             app:layout_constraintStart_toStartOf="parent"

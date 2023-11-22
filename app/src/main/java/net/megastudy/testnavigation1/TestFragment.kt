@@ -28,8 +28,6 @@ class TestFragment : BaseBindingFragment<FragmentTestBinding>(R.layout.fragment_
             sideSheetBehavior.setState(SideSheetBehavior.STATE_EXPANDED)
         }
 
-
-
         binding.btnMoveA.setOnClickListener {
             val navController = requireActivity().findNavController(R.id.flMain)
             navController.navigate(R.id.testAFragment)
