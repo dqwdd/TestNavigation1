@@ -347,7 +347,6 @@ public class SideSheetBehavior<V extends View> extends CoordinatorLayout.Behavio
     createShapeValueAnimator();
 
 
-
     //SideSheetBehavior_Layout_coplanarSiblingViewId 이거 검색해보기
 
 //    if (a.hasValue(R.styleable.SideSheetBehavior_Layout_coplanarSiblingViewId)) {
